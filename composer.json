@@ -24,6 +24,14 @@
         "socialiteproviders/linkedin": "^3.0",
         "spatie/laravel-permission": "^2.7"
     },
+    "autoload": {
+      "psr-4": {
+        "Kolpikov\\Packages": "src/"
+      },
+      "files": [
+        "src/helpers.php"
+      ]
+    },
     "config": {
         "sort-packages": true
     },
