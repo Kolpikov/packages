@@ -26,7 +26,7 @@
     },
     "autoload": {
       "psr-4": {
-        "Kolpikov\\Packages": "src/"
+        "Kolpikov\\Packages\\": "src/"
       },
       "files": [
         "src/helpers.php"
