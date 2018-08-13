@@ -1,3 +1,6 @@
+## 1.0.4 (2018-08-13)
+
+  * checkIfAdmin prefix from Config
 ## 1.0.3 (2018-08-12)
 
   * added helpers.php file

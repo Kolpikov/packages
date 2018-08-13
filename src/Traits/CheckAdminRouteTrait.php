@@ -12,6 +12,6 @@ trait CheckAdminRouteTrait
      */
     public static function checkIfAdmin()
     {
-        return (Request::segment(1) == 'admin') ? true : false;
+        return (Request::segment(1) == \Config::get('admin.prefix', 'admin')) ? true : false;
     }
 }
