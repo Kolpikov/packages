@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Traits;
+namespace Kolpikov\Packages\Scopes;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;

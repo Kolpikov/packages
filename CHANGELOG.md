@@ -1,3 +1,6 @@
+## 1.0.5 (2018-08-14)
+
+  * fix namespace for PublishedScope  
 ## 1.0.4 (2018-08-13)
 
   * checkIfAdmin prefix from Config
