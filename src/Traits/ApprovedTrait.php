@@ -11,7 +11,7 @@ trait ApprovedTrait
      *
      * @return void
      */
-    public static function bootPublished()
+    public static function bootApprovedTrait()
     {
         if (!self::checkIfAdmin()) {
             static::addGlobalScope(new ApprovedScope);
