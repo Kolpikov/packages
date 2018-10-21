@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Traits;
+namespace Kolpikov\Packages\Traits;
 
 trait ImageFilesRelationTrait
 {
