@@ -1,3 +1,6 @@
+## 1.0.11 (2018-10-21)
+* Translatable
+
 ## 1.0.8 (2018-10-21)
 * fix Images and Documents Relation traits namespace
 
