@@ -23,14 +23,31 @@ class AppResourceRegistrar extends ResourceRegistrar
         'softdelete',
     ];
 
+    /**
+     * Add the destroy method for a resourceful route.
+     *
+     * @param  string $name
+     * @param  string $base
+     * @param  string $controller
+     * @param  array $options
+     * @return \Illuminate\Routing\Route
+     */
+    protected function addResourceDestroy($name, $base, $controller, $options)
+    {
+        $uri = $this->getResourceUri($name) . '/{' . $base . '}' . '/destroy';
+
+        $action = $this->getResourceAction($name, $controller, 'destroy', $options);
+
+        return $this->router->get($uri, $action);
+    }
 
     /**
-     * Add the index method for a resourceful route.
+     * Add the sort method for a resourceful route.
      *
-     * @param  string  $name
-     * @param  string  $base
-     * @param  string  $controller
-     * @param  array   $options
+     * @param  string $name
+     * @param  string $base
+     * @param  string $controller
+     * @param  array $options
      * @return \Illuminate\Routing\Route
      */
     protected function addResourceSort($name, $base, $controller, $options)
@@ -39,24 +56,24 @@ class AppResourceRegistrar extends ResourceRegistrar
 
         $action = $this->getResourceAction($name, $controller, 'sort', $options);
 
-        return $this->router->match(['PUT', 'PATCH'], $uri, $action);
+        return $this->router->post($uri, $action);
     }
 
     /**
      * Add the softdelete method for a resourceful route.
      *
-     * @param  string  $name
-     * @param  string  $base
-     * @param  string  $controller
-     * @param  array   $options
+     * @param  string $name
+     * @param  string $base
+     * @param  string $controller
+     * @param  array $options
      * @return \Illuminate\Routing\Route
      */
     protected function addResourceSoftdelete($name, $base, $controller, $options)
     {
-        $uri = $this->getResourceUri($name).'/{'.$base.'}';
+        $uri = $this->getResourceUri($name) . '/{' . $base . '}' . '/softdelete';
 
         $action = $this->getResourceAction($name, $controller, 'softdelete', $options);
 
-        return $this->router->match(['PUT', 'PATCH'], $uri, $action);
+        return $this->router->get($uri, $action);
     }
 }
