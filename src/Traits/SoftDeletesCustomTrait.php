@@ -47,7 +47,7 @@ trait SoftDeletesCustomTrait
 
         if (!$isVisible && !$trashed) {
             $model->delete();
-        } elseif ($trashed) {
+        } elseif ($isVisible && $trashed) {
             $model->restore();
         }
     }
