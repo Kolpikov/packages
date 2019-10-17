@@ -1,3 +1,6 @@
+## 2.0 (2019-10-17)
+* Update dependencies to support Laravel 6
+
 ## 1.0.11 (2018-10-21)
 * Translatable
 
